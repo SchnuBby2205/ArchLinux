@@ -23,7 +23,7 @@ ArchLinux in Dual Boot with Windows10
   - Keymaps
     - localectl list-keymaps [ENTER]
     - or localectl list-keymaps | grep de [ENTER]
-    - loadkeys <your locale> eg: loadkeys de_CH-latin1 [ENTER]
+    - loadkeys [your locale] eg: loadkeys de_CH-latin1 [ENTER]
   
   - Internet connection
     - ip a [ENTER] (On Cable there should already be an IP)
@@ -38,7 +38,7 @@ ArchLinux in Dual Boot with Windows10
   - Mirrors
     - pacman -Syyy [ENTER]
     - pacman -S reflector [ENTER]
-    - reflector -c <Country> -a 6 --sort rate --save /etc/pacman.d/mirrorlist [ENTER]
+    - reflector -c [Country] -a 6 --sort rate --save /etc/pacman.d/mirrorlist [ENTER]
       (reflector -c Germany -a 6 --sort rate --save /etc/pacman.d/mirrorlist [ENTER])
     - pacman -Syyy [ENTER]
   
@@ -58,7 +58,7 @@ ArchLinux in Dual Boot with Windows10
     ![grafik](https://user-images.githubusercontent.com/80288097/229473029-f828023e-b6a3-462e-af1f-cc767a4be9d5.png)
   
   - Formatting
-    - mkfs.ext4 <Partition> eg: mkfs.ext4 /dev/sda5 [ENTER]
+    - mkfs.ext4 [Partition] eg: mkfs.ext4 /dev/sda5 [ENTER]
     - mount /dev/sda5 /mnt [ENTER]
     - EFI Mounting:
       - mkdir /mnt/boot [ENTER]
