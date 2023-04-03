@@ -26,6 +26,7 @@ ArchLinux in Dual Boot with Windows10
   
   - Internet connection
     - ip a <ENTER> (On Cable there should already be an IP)
+    
     ![grafik](https://user-images.githubusercontent.com/80288097/229470952-4e0f0bf9-d175-4425-bcfa-5bd82ec0bf4b.png)
     - On WiFi -> wifi-menu <ENTER>
       - Select WiFi enter Password -> ip a <ENTER> should show an IP
@@ -42,6 +43,7 @@ ArchLinux in Dual Boot with Windows10
   
   - Partitioning
     - lsblk <ENTER>
+    
     ![grafik](https://user-images.githubusercontent.com/80288097/229472279-5eabd6a4-1e84-4c2c-b5ea-416aadbd5033.png)
     - Free Space is not showing up here -> That's completly normal
     - cfdisk /dev/sda <ENTER>
@@ -66,6 +68,7 @@ ArchLinux in Dual Boot with Windows10
       - mount /dev/sda4 /mnt/windows10 <ENTER>
       - /dev/sda4 is the Windows Partition - Repeat this Step for any Win Partition you want to have access to in Arch
     - lsblk <ENTER>
+    
     ![grafik](https://user-images.githubusercontent.com/80288097/229474316-b10edff4-0b59-44e3-b176-dc40bc28969c.png)
   
   - Installing Base System
@@ -76,6 +79,7 @@ ArchLinux in Dual Boot with Windows10
   - Generate FSTab to keep the mounted Partitions
     - genfstab -U /mnt >> /mnt/etc/fstab <ENTER>
     - Control: cat /mnt/etc/fstab
+    
     ![grafik](https://user-images.githubusercontent.com/80288097/229475245-fcbc257e-5747-497e-ba9f-86790974545d.png)
   
   - CHROOT
