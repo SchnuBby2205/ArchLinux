@@ -170,6 +170,9 @@ ArchLinux in Dual Boot with Windows10
     - sudo pacman -S sddm <ENTER>
     - sudo systemctl enable sddm <ENTER>
     - sudo pacman -S plasma kde-applications packagekt-qt5 <ENTER>
+    - Stopping KDE from Autostart
+      - sudo systemctl disable sddm <ENTER>
+      - Be careful there will be NO Desktop anymore only Terminal Prompt
   
   - Internet Browser
     - sudo pacman -S firefox <ENTER>
