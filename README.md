@@ -225,7 +225,7 @@ REMOVE Arch Linux
     - yay -S dmenu-distrotube-git (dmenu)
     - yay -S nerd-fonts-mononoki (Fonts) (Dependency for dmenu st and dwm)
   
-  - cp /etc/X11/xinit/xinitrc /home/<username>/.xinitrc -> At the End of the File are the Autostart's
+  - cp /etc/X11/xinit/xinitrc /home/[username]/.xinitrc -> At the End of the File are the Autostart's
   
   ![grafik](https://user-images.githubusercontent.com/80288097/229516414-f390e4d8-a436-4417-b512-1e152effc671.png)
   
