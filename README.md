@@ -164,7 +164,7 @@ ArchLinux in Dual Boot with Windows10
     - NVIDIA Graphics: sudo pacman -S nvidia nvidia-utils
   
   - Display Server
-    - sudo pacman -S xorg
+    - sudo pacman -S xorg (xorg-init)
   
   - DisplayManager (KDE)
     - sudo pacman -S sddm <ENTER>
