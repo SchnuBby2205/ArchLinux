@@ -221,7 +221,7 @@ REMOVE Arch Linux
     - nitrogen -> for backgrounds
     - picom -> for compositor
     - yay -S dwm-distrotube-git (Window Manger)
-    - yay -S st-strotube-git (Terminal)
+    - yay -S st-distrotube-git (Terminal)
     - yay -S dmenu-distrotube-git (dmenu)
     - yay -S nerd-fonts-mononoki (Fonts) (Dependency for dmenu st and dwm)
   
