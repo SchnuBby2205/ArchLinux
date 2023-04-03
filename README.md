@@ -38,6 +38,7 @@ Create a new BCD for Windows (Windows wont BOOT Without it!):
 https://woshub.com/how-to-repair-deleted-efi-partition-in-windows-7/
 
 QUOTE
+
 Optional! You can manually perform all the actions that the bcdboot command does. Next, we’ll show you how to copy the EFI system files and rebuild the BCD yourself with the bcdedit command.
 Copy the EFI environment boot files from the directory of your drive where your Windows is installed:
 
@@ -63,6 +64,7 @@ bcdedit /store BCD /set {default} osdevice partition=c:
 bcdedit /store BCD /set {default} path \Windows\System32\winload.efi
 bcdedit /store BCD /set {default} systemroot \Windows
 exit
+
 QUOTE
 
 ArchLinux in Dual Boot with Windows10
