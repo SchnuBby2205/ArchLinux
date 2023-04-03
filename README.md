@@ -217,23 +217,26 @@ REMOVE Arch Linux
   Means Login Through Terminal no Desktop only WindowsManager and DMenu
   =========
   (source: https://www.youtube.com/watch?v=pouX5VvX0_Q)
-  nitrogen -> for backgrounds
-  picom -> for compositor
-  yay -S dwm-distrotube-git (Window Manger)
-  yay -S st-strotube-git (Terminal)
-  yay -S dmenu-distrotube-git (dmenu)
-  yay -S nerd-fonts-mononoki (Fonts)
+  - Change These to Wallpaper or Window Manager of your liking
+    - nitrogen -> for backgrounds
+    - picom -> for compositor
+    - yay -S dwm-distrotube-git (Window Manger)
+    - yay -S st-strotube-git (Terminal)
+    - yay -S dmenu-distrotube-git (dmenu)
+    - yay -S nerd-fonts-mononoki (Fonts) (Dependency for dmenu st and dwm)
   
-  cp /etc/X11/xinit/xinitrc /home/<username>/.xinitrc -> At the End of the File are the Autostart's
+  - cp /etc/X11/xinit/xinitrc /home/<username>/.xinitrc -> At the End of the File are the Autostart's
+  
   ![grafik](https://user-images.githubusercontent.com/80288097/229516414-f390e4d8-a436-4417-b512-1e152effc671.png)
+  
   ![grafik](https://user-images.githubusercontent.com/80288097/229516772-809fe9a1-e987-4e28-869b-1f69452f329f.png)
 
-  startx -> If startx isnt working you need sudo pacman -S xinit
-  Resolution:
-  xrandr <ENTER>
-  xrandr -s 1920x1080 <ENTER>
-  
-  AUTOSTART
-  sudo nano ~7.bash_profile
-  insert last line:
-  [[$(fgconsole 2>/dev/null) == 1]] && exec startx == vt1
+  - startx -> If startx isnt working you need sudo pacman -S xinit
+  - Resolution:
+    - xrandr <ENTER>
+    - xrandr -s 1920x1080 <ENTER>
+
+  - AUTOSTART
+    - sudo nano ~7.bash_profile
+    - insert last line:
+    - [[$(fgconsole 2>/dev/null) == 1]] && exec startx == vt1
