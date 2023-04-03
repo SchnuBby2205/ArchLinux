@@ -51,6 +51,7 @@ ArchLinux in Dual Boot with Windows10
     - Quit Program
     - lsblk <ENTER>
     - Free Space now shows up 
+  
     ![grafik](https://user-images.githubusercontent.com/80288097/229473029-f828023e-b6a3-462e-af1f-cc767a4be9d5.png)
   
   - Formatting
