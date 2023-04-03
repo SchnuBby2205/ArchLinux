@@ -237,6 +237,6 @@ REMOVE Arch Linux
     - xrandr -s 1920x1080 <ENTER>
 
   - AUTOSTART
-    - sudo nano ~7.bash_profile
+    - sudo nano ~/.bash_profile
     - insert last line:
     - [[$(fgconsole 2>/dev/null) == 1]] && exec startx == vt1
