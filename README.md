@@ -193,15 +193,18 @@ REMOVE Arch Linux
   - Go to Windows Diskmanagement
   - Delete the Linux Partition
   - Open PowerShell as Admin
-  - diskpart <ENTER>
-  - list volume <ENTER>
-  - select volume <number> -> number is the Number of 99MiB Partition
-  - assign letter=x
+    - diskpart <ENTER>
+    - list volume <ENTER>
+    - select volume <number> -> number is the Number of 99MiB Partition
+    - assign letter=x
   - Open Taskmanager
-  - File -> Run New Task -> Browse
-  - Select Partition X:
-  - Delete the GRUB Folder
-  - Open the EFI Folder
-  - Delete the GRUB Folder if it's there
-  - powershell: remove letter=x 
-  - powershell: exit 
+    - File -> Run New Task -> Browse
+    - Select Partition X:
+    - Delete the GRUB Folder
+    - Open the EFI Folder
+    - Delete the GRUB Folder if it's there
+  - Back to Powershell
+    - remove letter=x 
+    - exit 
+  
+  Arch Linux and GRUB should now be completly removed from the System.
