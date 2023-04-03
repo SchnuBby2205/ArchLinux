@@ -42,7 +42,7 @@ ArchLinux in Dual Boot with Windows10
   
   - Partitioning
     - lsblk <ENTER>
-    ![grafik](https://user-images.githubusercontent.com/80288097/229472279-5eabd6a4-1e84-4c2c-b5ea-416aadbd5033.png)
+    - ![grafik](https://user-images.githubusercontent.com/80288097/229472279-5eabd6a4-1e84-4c2c-b5ea-416aadbd5033.png)
     - Free Space is not showing up here -> That's completly normal
     - cfdisk /dev/sda <ENTER>
     - Here the Free Space shows up
