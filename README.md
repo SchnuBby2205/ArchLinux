@@ -166,7 +166,7 @@ ArchLinux in Dual Boot with Windows10
   - Display Server
     - sudo pacman -S xorg xorg-init
   
-  - DisplayManager (KDE) - Steps dont needed if you just use a Window Manager and a Terminaml Emu
+  - DisplayManager (KDE) - Steps dont needed if you just use a Window Manager and a Terminaml Emu DMenu
     - sudo pacman -S sddm <ENTER>
     - sudo systemctl enable sddm <ENTER>
     - sudo pacman -S plasma kde-applications packagekt-qt5 <ENTER>
