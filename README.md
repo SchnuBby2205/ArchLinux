@@ -14,6 +14,7 @@ ArchLinux in Dual Boot with Windows10
 - Download Arch Iso:
   - https://www.archlinux.de/download (Preferred -> cause it's always the newest Release)
   - Direct Link: https://archlinux.org/releng/releases/2023.04.01/torrent/ (torrent)
+  - Make bootable USB Drive with balena etcher
   
 - Reboot PC -> Boot from Arch ISO
 
@@ -132,4 +133,75 @@ ArchLinux in Dual Boot with Windows10
     - wireless_tools / wpa_supplicant -> W-LAN
     - bluez / bluez-utils / pulseaudio-bluetooth -> bluetooh
     - If Audio wont work install pulseaudio
-
+    - grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB <ENTER>
+    - grub-mkconfig -o /boot/grub/grub.cfg <ENTER>
+  
+  - Services
+    - systemctl enable NetworkManager <ENTER>
+    - systemctl enable bluetooth <ENTER>
+    - systemctl enable org.cups.cupsd <ENTER>
+    - systemcrl enable sshd <ENTER>
+  
+  - New User
+    - useradd -mG wheel <name> <ENTER>
+    - passwd <name> <ENTER>
+    - SUDO Persmission for new User
+      - EDITOR=nano visudo <ENTER>
+      - Find line %wheel ALL=(ALL) ALL -> uncomment the Line -> Save File
+  
+  - Reboot
+    - exit <ENTER>
+    - umount -a <ENTER>
+    - reboot <ENTER>
+  
+  - Reboot in Arch with the new User
+    - Check IP ip a <ENTER>
+    - nmtui -> for WiFi
+ 
+  - Graphics Driver
+    - Intel Graphics: sudo pacman -S xf86-video-intel
+    - AMD Graphics: sudo pacman -S xf86-video-amdgpu
+    - NVIDIA Graphics: sudo pacman -S nvidia nvidia-utils
+  
+  - Display Server
+    - sudo pacman -S xorg
+  
+  - DisplayManager (KDE)
+    - sudo pacman -S sddm <ENTER>
+    - sudo systemctl enable sddm <ENTER>
+    - sudo pacman -S plasma kde-applications packagekt-qt5 <ENTER>
+  
+  - Internet Browser
+    - sudo pacman -S firefox <ENTER>
+  
+  - YAY
+    - git clone https://aur.archlinux.org/yay.git <ENTER>
+    - cd yay/ <ENTER>
+    - makepkg -si PKGBUILD <ENTER>
+    - yay -S ttf-ms-fonts -> 1 -> N
+  
+  - Backup software
+    - yay -S timeshift -> N -> N
+  
+  - Reboot
+    - exit <ENTER>
+    - reboot <ENTER>
+  
+  
+REMOVE Arch Linux
+=====================================
+  - Go to Windows Diskmanagement
+  - Delete the Linux Partition
+  - Open PowerShell as Admin
+  - diskpart <ENTER>
+  - list volume <ENTER>
+  - select volume <number> -> number is the Number of 99MiB Partition
+  - assign letter=x
+  - Open Taskmanager
+  - File -> Run New Task -> Browse
+  - Select Partition X:
+  - Delete the GRUB Folder
+  - Open the EFI Folder
+  - Delete the GRUB Folder if it's there
+  - powershell: remove letter=x 
+  - powershell: exit 
