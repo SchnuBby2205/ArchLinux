@@ -1,6 +1,70 @@
 # ArchLinux
 Installation of ArchLinux
 
+!!ATTENTION!!
+=============
+Installation within the same EFI Partation fails cause Partiotion is to small.
+create a new partition:
+https://www.youtube.com/watch?v=KmIlfKYU5cQ
+
+QUOTE
+
+Create Bootfile
+
+In Windows Diskpart
+Select the disk:
+select disk 0
+Create a 100 MB EFI partition:
+create partition efi size=100
+Make sure that the 100 MB partition is selected in diskpart (an asterisk before Partition 1). Format your EFI partition with FAT32 file system, and assign a drive letter to it:
+list partition
+select partition 1
+format quick fs=fat32 label="System"
+assign letter=G
+Now you need to create a 16MB MSR partition (for Windows 10 or 11).
+create partition msr size=16
+list partition
+list vol
+In my case, the drive letter C: is already assigned to the main Windows partition. If it’s not, assign the drive letter to it as follows:
+select vol 1
+assign letter=C
+exit
+
+bcdboot c:\windows /s G: /f UEFI
+
+QUOTE
+
+Create a new BCD for Windows (Windows wont BOOT Without it!):
+https://woshub.com/how-to-repair-deleted-efi-partition-in-windows-7/
+
+QUOTE
+Optional! You can manually perform all the actions that the bcdboot command does. Next, we’ll show you how to copy the EFI system files and rebuild the BCD yourself with the bcdedit command.
+Copy the EFI environment boot files from the directory of your drive where your Windows is installed:
+
+assign the created new partition (Youtube Video) to G: via diskpart
+
+Rebuild the Boot Configuration Data (BCD) entry in Window Boot Manager:
+g:
+cd EFI\Microsoft\Boot
+bcdedit /createstore BCD
+bcdedit /store BCD /create {bootmgr} /d “Windows Boot Manager”
+bcdedit /store BCD /create /d “My Windows 10” /application osloader
+The command returns the GUID of the created BCD entry. Use this GUID instead of {your_guid} in the following command:
+
+bcdedit /store BCD /set {bootmgr} default {your_guid}
+bcdedit /store BCD /set {bootmgr} path \EFI\Microsoft\Boot\bootmgfw.efi
+bcdedit /store BCD /set {bootmgr} displayorder {default}
+
+bcdbedit: create boot entry for efi system partition
+
+The following bcdedit commands are run in the {default} context:
+bcdedit /store BCD /set {default} device partition=c:
+bcdedit /store BCD /set {default} osdevice partition=c:
+bcdedit /store BCD /set {default} path \Windows\System32\winload.efi
+bcdedit /store BCD /set {default} systemroot \Windows
+exit
+QUOTE
+
 ArchLinux in Dual Boot with Windows10
 =====================================
 (Source: https://www.youtube.com/watch?v=L1B1O0R1IHA)
