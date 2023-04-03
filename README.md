@@ -42,7 +42,7 @@ ArchLinux in Dual Boot with Windows10
   
   - Partitioning
     - lsblk <ENTER>
-    - ![grafik](https://user-images.githubusercontent.com/80288097/229472279-5eabd6a4-1e84-4c2c-b5ea-416aadbd5033.png)
+    ![grafik](https://user-images.githubusercontent.com/80288097/229472279-5eabd6a4-1e84-4c2c-b5ea-416aadbd5033.png)
     - Free Space is not showing up here -> That's completly normal
     - cfdisk /dev/sda <ENTER>
     - Here the Free Space shows up
@@ -65,7 +65,7 @@ ArchLinux in Dual Boot with Windows10
       - mount /dev/sda4 /mnt/windows10 <ENTER>
       - /dev/sda4 is the Windows Partition - Repeat this Step for any Win Partition you want to have access to in Arch
     - lsblk <ENTER>
-    - ![grafik](https://user-images.githubusercontent.com/80288097/229474316-b10edff4-0b59-44e3-b176-dc40bc28969c.png)
+    ![grafik](https://user-images.githubusercontent.com/80288097/229474316-b10edff4-0b59-44e3-b176-dc40bc28969c.png)
   
   - Installing Base System
     - pacstrap /mnt base linux linux-firmware nano (intel-ucode / amd-ucode) <ENTER>
