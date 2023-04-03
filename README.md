@@ -51,7 +51,7 @@ ArchLinux in Dual Boot with Windows10
     - Quit Program
     - lsblk <ENTER>
     - Free Space now shows up 
-    ![grafik](https://user-images.githubusercontent.com/80288097/229473029-f828023e-b6a3-462e-af1f-cc767a4be9d5.png)
+    - ![grafik](https://user-images.githubusercontent.com/80288097/229473029-f828023e-b6a3-462e-af1f-cc767a4be9d5.png)
   
   - Formatting
     - mkfs.ext4 <Partition> eg: mkfs.ext4 /dev/sda5 <ENTER>
@@ -65,7 +65,7 @@ ArchLinux in Dual Boot with Windows10
       - mount /dev/sda4 /mnt/windows10 <ENTER>
       - /dev/sda4 is the Windows Partition - Repeat this Step for any Win Partition you want to have access to in Arch
     - lsblk <ENTER>
-    ![grafik](https://user-images.githubusercontent.com/80288097/229474316-b10edff4-0b59-44e3-b176-dc40bc28969c.png)
+    - ![grafik](https://user-images.githubusercontent.com/80288097/229474316-b10edff4-0b59-44e3-b176-dc40bc28969c.png)
   
   - Installing Base System
     - pacstrap /mnt base linux linux-firmware nano (intel-ucode / amd-ucode) <ENTER>
