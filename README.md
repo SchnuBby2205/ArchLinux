@@ -311,12 +311,13 @@ REMOVE Arch Linux
 AFTER INSTALL
 =============
 Install Fish Terminal / Shell
-create Alias pms "pacman -Ss"
-pmi "pacman -S"
-pmus "pacman -Syu"
+create Alias
+- pms "pacman -Ss"
+- pmi "pacman -S"
+- pmus "pacman -Syu"
 
 REMARKS
 =======
-pacman -Syu -> Full System update
-pacman -Syyy -> Update locale DB even if there are no Changes
-pacman -Ss -> Search Package
+- pacman -Syu -> Full System update
+- pacman -Syyy -> Update locale DB even if there are no Changes
+- pacman -Ss -> Search Package
