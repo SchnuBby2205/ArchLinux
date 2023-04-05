@@ -310,7 +310,7 @@ REMOVE Arch Linux
 
 AFTER INSTALL
 =============
-- Install Fish Terminal / Shell
+- Install Fish (and oh-my-fish) Terminal / Shell
   - create Alias
     - pms "pacman -Ss"
     - pmi "pacman -S"
