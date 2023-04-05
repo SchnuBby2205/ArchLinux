@@ -315,6 +315,7 @@ AFTER INSTALL
     - pms "pacman -Ss"
     - pmi "pacman -S"
     - pmus "pacman -Syu"
+  - To use Fish as Standard Shell goto .bash.rc and insert as new last line "exec fish"
 
 REMARKS
 =======
