@@ -323,3 +323,4 @@ REMARKS
   - pacman -Syyy -> Update locale DB even if there are no Changes
   - pacman -Ss -> Search Package
   - Alacritty is a good Terminal
+    - Then we need a compositor and a wallpaper programm
