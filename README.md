@@ -322,3 +322,4 @@ REMARKS
   - pacman -Syu -> Full System update
   - pacman -Syyy -> Update locale DB even if there are no Changes
   - pacman -Ss -> Search Package
+  - Alacritty is a good Terminal
