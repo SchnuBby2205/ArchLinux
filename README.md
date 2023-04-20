@@ -325,4 +325,5 @@ REMARKS
   - Alacritty is a good Terminal
     - Then we need a compositor and a wallpaper programm
     - compton/picom(on Arch) as compositor and nitrogen as wallpaper
-  - DMenu
+  - ROFI
+  - and eww for widges
