@@ -336,5 +336,4 @@ Drucker Installieren (HP)
   - hplip runterladen
   - sudo pacman -S hplip
   - Drucker per USB anschließen
-  - dann drucker in CUPS unter "Verwaltung" hinzufügen
-
+  - drucker in CUPS unter "Verwaltung" hinzufügen
