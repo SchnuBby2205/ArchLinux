@@ -327,3 +327,14 @@ REMARKS
     - compton/picom(on Arch) as compositor and nitrogen as wallpaper
   - ROFI
   - and eww for widges
+
+Drucker Installieren (HP)
+=======
+  - CUPS runterladen
+  - sudo pacman -S cups
+  - CUPS läuft unter http://localhost:631/
+  - hplip runterladen
+  - sudo pacman -S hplip
+  - Drucker per USB anschließen
+  - dann drucker in CUPS unter "Verwaltung" hinzufügen
+
