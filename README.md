@@ -337,3 +337,6 @@ Drucker Installieren (HP)
   - sudo pacman -S hplip
   - Drucker per USB anschließen
   - drucker in CUPS unter "Verwaltung" hinzufügen
+
+Make WINEPREFIX
+WINEPREFIX=<path_to_new_prefix> winecfg
